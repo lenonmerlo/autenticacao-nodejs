@@ -1,0 +1,37 @@
+O que é autenticação?
+    Um mecanismo responsável por garantir que um usuário é quem ele diz que é.
+    Usado para separar o conteúdo da aplicação que é apenas visitantes do conteúdo para usuários.
+    Pode ser implementada de várias formas, sendo a mais comum por e-mail e senha.
+
+Tipos de autenticação:
+    Credenciais únicas (e-mail e senha)
+    Autenticação de Múltiplos Fatores (MFA)
+    Single Sign-On (SSO)
+    Autenticação sem senha (passwordless)
+
+Protocolos e Estratégias de Autenticação:
+    Baseada em sessões
+    OAuth
+    JWT (JSON Web Token)
+
+O que é autorização?
+    Um mecanismo responsável por garantir que partes específicas de uma aplicação sejam ou não acessadas por determinados usuários ou grupos de usuários.
+    Trabalha com a verificação dos privilégios e permissões dos usuários autenticados.
+
+Tipos de autorização:
+    Controle de Acesso Baseado em Atributos (ABAC): permissões baseadas em atributos, como o cargo ou departamento de um usuário.
+    Controle de Acesso Baseado em Papéis, ou Roles (RBAC): permissões atribuídas a papéis, e papéis são atribuídos aos usuários. Ex. Admin, Editor e Leitor.
+    Listas de Controle de Acesso (ACLs): 
+        São listas que especificam quais usuários ou grupos de usuários tem permissão para acessar determinados recursos.
+        Também podem espeificar os tipos de ações que podem ser realizadas (leitura, escrita, execução, etc.)
+        Ex.
+            - Recurso: /documentoA
+                permissões:
+                    Leitura: ['john', 'jane']
+                    Ecrita: ['jane']
+                    Exclusão: ['admin']
+            - Recurso: /documentoB
+                permissões:
+                    Leitura: [ 'alice']
+                    Escrita: [ 'bob']
+                    Exclusão: [ 'admin']
